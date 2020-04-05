@@ -44,6 +44,11 @@
 			font-size: 30px;
 		}
 	}
+	.carousel {
+		&__inner {
+			width: 650px;	
+		}
+	}
 
 }
 
@@ -137,6 +142,11 @@
 			font-size: 23px;
 		}
 	}
+	.carousel {
+		&__inner {
+			width: 550px;	
+		}
+	}
 
 }
 
@@ -217,10 +227,15 @@
 		min-height: 480px;
 		&__descr {
 			font-size: 13px;
-			margin-top: 40px;
+			margin-top: 35px;
 		}
 		.title_left {
+			display: none;
 			font-size: 18px;
+		}
+		.title_dn {
+			display: block;
+			margin: 0 20px;
 		}
 		.feed-form {
 			width: 210px;
@@ -233,6 +248,11 @@
 		.button_submit {
 			font-size: 12px;
 			height: 33px;
+		}
+	}
+	.carousel {
+		&__inner {
+			width: 300px;	
 		}
 	}
 }
