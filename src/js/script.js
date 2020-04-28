@@ -52,6 +52,9 @@ $(document).ready(function(){
 		})
 	});
 
+	//  validateForms
+
+
 	function validateForms(form){
 		$(form).validate({
 			rules: {
@@ -80,4 +83,48 @@ $(document).ready(function(){
 	validateForms('#consultation-form');
 	validateForms('#consultation form');
 	validateForms('#order form');
+
+	// masked
+
+	$('input[name=phone]').mask("+7 (999) 999-99-99")
+
+	// Send message
+
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.ajax({
+			type: "POST",
+			url: "mailer/smart.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$(this).find("input").val("");
+			$('#consultation, #order').fadeOut();
+			$('.overlay, #thanks').fadeIn('slow');
+
+			$('form').trigger('reset');
+		});
+		return false;
+	});
+
+	// Pageup and Smooth scroll
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1600) {
+			$('.pageup').fadeIn();
+		} else {
+			$('.pageup').fadeOut();
+		}
+	});
+
+	$("a[href^=#up]").click(function(){
+		const _href = $(this).attr("href");
+		$("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+		return false;
+	});
+	
+	// animated wow.js
+
+	new WOW().init();
+
+
 });

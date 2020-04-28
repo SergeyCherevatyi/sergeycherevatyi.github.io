@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,11 @@
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/font.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css"/>
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/style.min.css">
-	<title>Document</title>
 </head>
 <body>
-	<section class="promo">
+	<section id="up" class="promo">
 		<div class="container">
 			<header class="header">
 				<a href="#" class="header__logo">
@@ -68,7 +68,7 @@
 					соревнованиям по триатлону!
 				</div>
 				<div class="advantages__icons">
-					<img src="icons/advantages/heart.png" alt="heart">
+					<img src="icons/advantages/heart.png" alt="heart" class="advantages__icons_animated">
 					<span>Заботимся о здоровье</span> 
 					Мы работаем для того, 
 					чтобы Ваши занятия спортом шли
@@ -101,23 +101,24 @@
 				и мы перезвоним вам в течении 10 минут
 			</div>
 			<form id='consultation-form' class='feed-form' action="#">
-				<input name="name" required type="text" placeholder="Ваше имя">
-				<input name="phone" required type="number" placeholder="Ваш телефон">
-				<input name="email" required type="email" placeholder="Ваш E-mail">
+				<input name="name"  type="text" placeholder="Ваше имя">
+				<input name="phone" placeholder="Ваш телефон">
+				<input name="email" type="email" placeholder="Ваш E-mail">
 
 				<button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
 			</form>
 		</div>
 	</section>
 
-	<section class="carousel">
+	<div class="carousel">
 		<div class="container">
-		<div class="carousel__inner">
-			<div><img src="img/Slider/watch_slider_1.jpg" alt="slider"></div>
-			<div><img src="img/Slider/watch_slider_2.jpg" alt="slider"></div>
-			<div><img src="img/Slider/watch_slider_3.jpg" alt="slider"></div>
+			<div class="carousel__inner">
+				<div><img src="img/Slider/watch_slider_1.jpg" alt="slider"></div>
+				<div><img src="img/Slider/watch_slider_2.jpg" alt="slider"></div>
+				<div><img src="img/Slider/watch_slider_3.jpg" alt="slider"></div>
+			</div>
 		</div>
-	</section>
+	</div>
 
 	<section class="catalog">
 		<div class="container">
@@ -373,7 +374,7 @@
 	<section class="review">
 		<div class="container">
 			<h2 class="title">отзывы клиентов</h2>
-			<div class="review__wrapper">
+			<div class="review__wrapper fadeInUp wow" data-wow-delay="1s" data-wow-duration="2s">
 				<div class="review__img">
 					<img src="img/reviews/review_1.png" alt="Irina">
 				</div>
@@ -388,7 +389,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="review__wrapper">
+			<div class="review__wrapper fadeInUp wow" data-wow-delay="1s" data-wow-duration="2s">
 				<div class="review__img">
 					<img src="img/reviews/review_2.png" alt="Ivan">
 				</div>
@@ -402,7 +403,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="review__wrapper">
+			<div class="review__wrapper fadeInUp wow" data-wow-delay="1s" data-wow-duration="2s">
 				<div class="review__img">
 					<img src="img/reviews/review_3.png" alt="Julia">
 				</div>
@@ -411,7 +412,7 @@
 					<div class="review__experience">2 полумарафона</div>
 					<div class="review__descr">
 						Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.
-						<span></span>Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!</span>
+						<span>Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!</span>
 						<span>Спасибо!!!</span>
 					</div>
 				</div>
@@ -439,7 +440,7 @@
 			<div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
 			<form class='feed-form feed-form_mt25' action="#">
 				<input name="name" type="text" placeholder="Ваше имя">
-				<input name="phone"  type="number" placeholder="Ваш телефон">
+				<input name="phone"  placeholder="Ваш телефон">
 				<input name="email"  type="email" placeholder="Ваш E-mail">
 
 				<button class="button button_submit">заказать кОНСУЛЬТАЦИЮ</button>
@@ -451,9 +452,9 @@
 			<div class="modal__subtitle">Ваш заказ:</div>
 			<div class="modal__descr">Пульсометр Polar FT1</div>
 			<form class='feed-form feed-form_mt25' action="#">
-				<input name="name" required type="text" placeholder="Ваше имя">
-				<input name="phone" required type="number" placeholder="Ваш телефон">
-				<input name="email" required type="email" placeholder="Ваш E-mail">
+				<input name="name" type="text" placeholder="Ваше имя">
+				<input name="phone" placeholder="Ваш телефон">
+				<input name="email" type="email" placeholder="Ваш E-mail">
 
 				<button class="button button_submit">Купить</button>
 			</form>
@@ -465,11 +466,19 @@
 			<div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
 		</div>
 	</div>
+	<a href="#up" class="pageup">
+		<img src="icons/chevron-circle-up-solid.svg" alt="up">
+	</a>
 
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="js/jquery.validate.min.js"></script>
-	<script type="text/javascript" src="js/slick.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/wow.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
